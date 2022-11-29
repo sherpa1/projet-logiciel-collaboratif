@@ -81,11 +81,12 @@ https://sonarcloud.io
 https://jestjs.io/fr/
 
 ---
-Alexandre Leroux
+**Alexandre Leroux**
 
-_Enseignant / Formateur_<br>
-_Développeur logiciel web & mobile_
+Développeur logiciel (web & mobile)<br/>
+Enseignant / Formateur
 
-Nancy (Grand Est, France)
-
-https://sherpa.one
+Mail : alex@sherpa.one<br/>
+Site : https://sherpa.one<br/>
+Github : @sherpa1<br/>
+Discord : sherpa#3890<br/>
