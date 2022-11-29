@@ -8,50 +8,71 @@ https://www.atlassian.com/fr/git/tutorials/comparing-workflows/gitflow-workflow#
 
 ### Production
 
-Depuis la branche locale _main_
+Depuis la branche locale __main__ de l'environnement de production
 
-- Création d'un nouveau commit :
+- Récupération manuelle des mises à jour (sans CI/CD) :
+`git pull`
 
-`git commit -am"description du commit"`
+- Passage d'une version de production à l'autre :
+`git checkout <identifiant du tag>`
 
-- Envoi sur la branche _main_ du dépôt distant :
+### Pré-Production
+
+Depuis la branche locale __main__
+
+- Envoi sur la branche __main__ du dépôt distant :
 
 `git push -u origin main`
 
-### Release
-
-Depuis la branche _main_
-
-- fusion d'une nouvelle feature de la branche approuvée sur la branche _main_ :
+- fusion d'une nouvelle feature de la branche approuvée sur la branche __main__ :
 `git merge feature/nom-de-la-feature`
 
+- fusion d'une branche de correction approuvée sur la branche __main__ :
+`git merge hotfix/nom-de-la-correction`
+
 - création d'une nouvelle version de production :
-`git tag -a v.1 -m"description de la version de release"`
+`git tag -a v1 -m"description de la version de release"`
+
+- envoi du tag sur le dépôt distant :
+`git push v1 origin main`
 
 - envoi sur la branche _main_ du dépôt distant :
-`git push -u origin main`
+`git push origin main`
 
 - Gestion des tags : https://www.atlassian.com/fr/git/tutorials/inspecting-a-repository/git-tag#:~:text=La%20commande%20git%20tag%20est,m%C3%A9tadonn%C3%A9es%20suppl%C3%A9mentaires%20sur%20le%20tag.
 
+### Correction
+
+Depuis la branche locale __main__
+
+- Création et basculement sur une branche de correction :
+
+`git checkout -b hotfix/nom-de-la-correction`
+
 ### Développement
 
-Depuis la branche locale _develop_
+Depuis la branche locale __develop__
 
 - Fusion d'une feature approuvée :
 `git merge feature/nom-de-la-feature`
 
-- Envoi sur la branche _develop_ du dépôt distant :
-`git push -u origin develop`
+- Envoi sur la branche __develop__ du dépôt distant :
+`git push origin develop`
 
 ### Feature
 
-Depuis la branche _develop_
+Depuis la branche __develop__
 
 - création et basculement vers une nouvelle branche :
 `git checkout -b feature/nom-de-la-feature`
 
-- fusion d'une nouvelle feature de la branche approuvée sur la branche _develop_ :
+- fusion d'une nouvelle feature de la branche approuvée sur la branche __develop__ :
 `git merge feature/nom-de-la-feature`
+
+Depuis la branche __feature/nom-de-la-feature__
+
+- Création d'un nouveau commit :
+`git commit -am"description du commit"`
 
 ## Qualité du code
 https://sonarcloud.io
