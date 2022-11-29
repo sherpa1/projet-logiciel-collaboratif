@@ -1,0 +1,23 @@
+{
+  "name": "git-collaboratif",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sherpa1/git-collaboratif.git"
+  },
+  "author": "Alexandre Leroux (alex@sherpa.one)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sherpa1/git-collaboratif/issues"
+  },
+  "homepage": "https://github.com/sherpa1/git-collaboratif#readme",
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20"
+  }
+}
